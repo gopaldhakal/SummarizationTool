@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+</head>
+<body>
+    <h1>Text Summarizer</h1>
+    <form id="summarizeForm">
+        <label for="inputText">Enter Text:</label>
+        <textarea id="inputText" name="inputText" rows="5"></textarea>
+        <button type="button" onclick="summarize()">Summarize</button>
+    </form>
+    <div id="summaryResult"></div>
+
+    <script>
+        function summarize() {
+            var inputText = document.getElementById('inputText').value;
+
+            // Make an AJAX request to Flask backend
+            fetch('/summarize', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: inputText }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('summaryResult').innerHTML = '<h2>Summary:</h2>' + data.summary;
+            });
+        }
+    </script>
+</body>
+</html>

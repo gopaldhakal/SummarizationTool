@@ -1,0 +1,51 @@
+
+.navbar {
+    background-color: blue; /* Set background color to blue */
+    overflow: hidden;
+    padding: 10px; /* Add padding for better spacing */
+    display: flex;
+    justify-content: space-between; /* Horizontally align items */
+    align-items: center; /* Vertically center items */
+  }
+  
+  .navbar-left {
+    display: flex;
+  }
+  
+  .navbar-left a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px; /* Add margin between links */
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right button {
+    background-color: #4CAF50; /* Green background color for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  /* styles.css */
+.aboutpage {
+    margin-top: -20px; /* Adjust the negative margin to move the content upward */
+  }
+  
+  .navv {
+    margin-top: -50px;
+  }
+
+  .name{
+    color: white;
+  }
